@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Order and Feedback</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  .container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  h2 {
+    text-align: center;
+    padding: 20px 0;
+    color: #333;
+  }
+  .glossary-item {
+    margin-bottom: 20px;
+  }
+  .glossary-item img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+  }
+  /* Form styles */
+  .form-container {
+    margin-top: 30px;
+  }
+  .form-group {
+    margin-bottom: 20px;
+  }
+  .form-group label {
+    display: block;
+    font-weight: bold;
+  }
+  .form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  .form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  .btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Order and Feedback</h2>
+
+  <div class="glossary-item">
+    <h3>Item 1</h3>
+    <img src="item1.jpg" alt="Item 1">
+    <p>Description of Item 1. Price: $10</p>
+  </div>
+
+  <div class="glossary-item">
+    <h3>Item 2</h3>
+    <img src="item2.jpg" alt="Item 2">
+    <p>Description of Item 2. Price: $15</p>
+  </div>
+
+  <!-- Delivery Address Form -->
+  <div class="form-container">
+    <h3>Delivery Address</h3>
+    <form id="delivery-form">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" required></textarea>
+      </div>
+      <button type="submit" class="btn">Submit Order</button>
+    </form>
+  </div>
+
+  <!-- Customer Feedback Form -->
+  <div class="form-container">
+    <h3>Customer Feedback</h3>
+    <form id="feedback-form">
+      <div class="form-group">
+        <label for="feedback">Share your experience:</label>
+        <textarea id="feedback" name="feedback" required></textarea>
+      </div>
+      <button type="submit" class="btn">Submit Feedback</button>
+    </form>
+  </div>
+
+</div>
+
+<script>
+  // JavaScript for submitting order and feedback
+  document.getElementById('delivery-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    alert('Order submitted successfully!');
+    // Here you can add code to submit the order data to your backend
+  });
+
+  document.getElementById('feedback-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    alert('Feedback submitted successfully!');
+    // Here you can add code to submit the feedback data to your backend
+  });
+</script>
+
+</body>
+</html>
