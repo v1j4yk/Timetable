@@ -9,14 +9,14 @@
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
   }
   form {
     max-width: 400px;
     align-self: center;
     margin: 20px auto;
     padding: 20px;
-    background-color: #fff;
+    background-color: transparent;
+    backdrop-filter: blur(8px);
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
@@ -27,6 +27,7 @@
   }
   label {
     font-weight: bold;
+    color: white;
   }
   input[type="text"],
   input[type="email"],
@@ -52,13 +53,18 @@
   input[type="submit"]:hover {
     background-color: #45a049;
   }
+  body{
+    background-image: url('https://miro.medium.com/v2/resize:fit:1400/format:webp/1*QtTExsRChSwHgG_womQC0g.jpeg');
+    background-size: cover;
+  }
 </style>
 </head>
 <body>
 
 <h2>Monthly Grocery List</h2>
+back
 
-<form action="submit.php" method="post">
+<form action="./product.html">
   <label for="name">Name:</label><br>
   <input type="text" id="name" name="name" required><br><br>
 
@@ -84,7 +90,7 @@
     <option value="December">December</option>
   </select><br><br>
 
-  <input type="submit" value="Submit">
+  <input type="submit" value="Next">
 </form>
 
 </body>
